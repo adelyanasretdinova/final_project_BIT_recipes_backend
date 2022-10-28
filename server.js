@@ -7,7 +7,7 @@ import {
   errorMiddleware,
  } from "./middleware/errors.js";
 // import wardrobeRouter from "./routes/wardrobe.js";
-// import usersRouter from "./routes/users.js"
+import usersRouter from "./routes/users.js"
 
 //create an instance of the server:
 const app = express();
@@ -25,7 +25,7 @@ app.use(corsHeaders);
 
 // request handler
 // TODO app.use("/wardrobe", wardrobeRouter);
-// TODO app.use("/users",usersRouter)
+app.use("/users",usersRouter)
 
 app.use("*", createErrorMissingPath);
 
